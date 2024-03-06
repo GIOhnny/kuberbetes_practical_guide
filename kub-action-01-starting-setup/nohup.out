@@ -1,0 +1,31 @@
+W0226 23:26:13.270892   17228 main.go:291] Unable to resolve the current Docker CLI context "default": context "default": context not found: open C:\Users\GIOhnny\.docker\contexts\meta\37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f\meta.json: The system cannot find the path specified.
+
+X Exiting due to GUEST_STATUS: Unable to get machine status: state: unknown state "minikube": docker container inspect minikube --format=<no value>: exit status 1
+stdout:
+
+
+stderr:
+error during connect: this error may indicate that the docker daemon is not running: Get "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/containers/minikube/json": open //./pipe/docker_engine: The system cannot find the file specified.
+
+* 
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                 │
+│    * If the above advice does not help, please let us know:                                                     │
+│      https://github.com/kubernetes/minikube/issues/new/choose                                                   │
+│                                                                                                                 │
+│    * Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.                        │
+│    * Please also attach the following file to the GitHub issue:                                                 │
+│    * - C:\Users\GIOhnny\AppData\Local\Temp\minikube_dashboard_0523594459abe8a0a927adcea201c6d48b9f3c8a_0.log    │
+│                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+W0226 23:28:41.577393   33780 main.go:291] Unable to resolve the current Docker CLI context "default": context "default": context not found: open C:\Users\GIOhnny\.docker\contexts\meta\37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f\meta.json: The system cannot find the path specified.
+* Verifying dashboard health ...
+* Launching proxy ...
+* Verifying proxy health ...
+* Opening http://127.0.0.1:53061/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/ in your default browser...
+W0226 23:39:03.695067   36752 main.go:291] Unable to resolve the current Docker CLI context "default": context "default": context not found: open C:\Users\GIOhnny\.docker\contexts\meta\37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f\meta.json: The system cannot find the path specified.
+* Verifying dashboard health ...
+* Launching proxy ...
+* Verifying proxy health ...
+* Opening http://127.0.0.1:54003/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/ in your default browser...
