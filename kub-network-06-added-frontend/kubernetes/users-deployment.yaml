@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: users-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector: 
     matchLabels:
       app: users
@@ -14,11 +14,8 @@ spec:
     spec:
       containers:
         - name: users
-          image: giohnny/kub-demo-users:latest
+          image: academind/kub-demo-users:latest
           env:
             - name: AUTH_ADDRESS
-            #get ip with kb get services
-            #value: "10.104.50.113"
-            #get namespaces with kb get namespaces
-            # Use cluster namespaces service_name.namespace
+              # value: "10.99.104.252"
               value: "auth-service.default"

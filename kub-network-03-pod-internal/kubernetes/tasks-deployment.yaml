@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: users-deployment
+  name: tasks-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector: 
     matchLabels:
-      app: users
+      app: tasks
   template:
     metadata:
       labels:
-        app: users
+        app: tasks
     spec:
       containers:
-        - name: users
-          image: giohnny/kub-demo-users:latest
+        - name: tasks
+          image: giohnny/kube-demo-tasks:latest
           env:
             - name: AUTH_ADDRESS
             #get ip with kb get services
@@ -22,3 +22,6 @@ spec:
             #get namespaces with kb get namespaces
             # Use cluster namespaces service_name.namespace
               value: "auth-service.default"
+              #value: "10.244.0.98"
+            - name: TASKS_FOLDER
+              value: tasks
