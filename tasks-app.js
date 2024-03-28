@@ -4,10 +4,7 @@ const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-const taskFolder = process.env.TASKS_FOLDER;
-if (!fs.existsSync(`./${taskFolder}`)) {
-  fs.mkdirSync(`./${taskFolder}`);
-}
+
 const filePath = path.join(__dirname, process.env.TASKS_FOLDER, 'tasks.txt');
 
 const app = express();
@@ -27,11 +24,7 @@ const extractAndVerifyToken = async (headers) => {
   }
   const token = headers.authorization.split(' ')[1]; // expects Bearer TOKEN
 
-  //const response = await axios.get('http://auth/verify-token/' + token);
-  //DNS not wortking
-  //const response = await axios.get(`http://${process.env.AUTH_ADDRESS}/verify-token/` + token);
-  // Internal address of docker working fine
-  const response = await axios.get(`http://${process.env.AUTH_SERVICE_SERVICE_HOST}/verify-token/` + token);
+  const response = await axios.get(`http://${process.env.AUTH_ADDRESS}/verify-token/` + token);
   return response.data.uid;
 };
 
